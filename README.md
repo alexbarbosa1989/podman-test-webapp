@@ -6,7 +6,7 @@ wildfly/eap quickstart test on podman
 $ git clone https://github.com/alexbarbosa1989/podman-test-webapp
 $mvn clean install
 
-2- Move generated war to /docker dir or edit Dockerfile pointing to war path
+2- Move generated war to /docker dir or edit Dockerfile pointing to war path:
 
 3- Download the latest eap 7.2 image from Red Hat Registry https://access.redhat.com/containers/?tab=images#/registry.access.redhat.com/jboss-eap-7/eap72-openshift
 
