@@ -3,8 +3,11 @@ wildfly/eap quickstart test on podman
 
 1- Clone the project in your environment and perform mvn options to build the war:
 
+~~~
 $ git clone https://github.com/alexbarbosa1989/podman-test-webapp
+
 $mvn clean install
+~~~
 
 2- Move generated war to /docker dir or edit Dockerfile pointing to war path:
 
