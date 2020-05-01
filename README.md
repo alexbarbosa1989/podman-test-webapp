@@ -49,7 +49,7 @@ CONTAINER ID  IMAGE                           COMMAND               CREATED     
 eaf051a0b0db  localhost/abarbosa/eaptest:1.0  /opt/eap/bin/open...  7 seconds ago  Up 7 seconds ago  0.0.0.0:8080->8080/tcp  youthful_banzai
 ~~~
 
-9- Restart local machine firewall to allow communication between localhost and the new container
+9- Restart local machine firewall to allow communication between localhost and the new container:
 
 ~~~
 $ sudo systemctl restart firewalld
