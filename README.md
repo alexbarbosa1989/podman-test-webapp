@@ -1,5 +1,5 @@
 # podman-test-webapp
-wildfly/eap quickstart test on podman
+wildfly/eap quickstart test on podman.
 
 1- Clone the project in your environment and perform mvn options to build the war:
 
@@ -27,7 +27,7 @@ registry.redhat.io/jboss-eap-7/eap72-openshift             latest   435638adf5ff
 $ podman build -t abarbosa/eaptest:1.0 /home/abarbosa/workspace/jboss-test-webapp/docker
 ~~~
 
-6- Review if image abarbosa/eaptest:1.0 was created (make sure tag is in lowercase):
+6- Review if image abarbosa/eaptest:1.0 was created (make sure to write the tag in lowercase):
 
 ~~~
 [abarbosa@localhost ~]$ podman images
