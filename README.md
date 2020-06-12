@@ -14,14 +14,15 @@ $mvn clean install
 mv ${PROJECT_HOME}/target/jboss-test-webapp.war ${PROJECT_HOME}/docker/
 ~~~
 
-3- Download the latest eap 7.2 image from Red Hat Registry https://access.redhat.com/containers/?tab=images#/registry.access.redhat.com/jboss-eap-7/eap72-openshift
+3- Download the latest eap 7 image from Red Hat Registry https://catalog.redhat.com/software/containers/search
 
 4- Look if image is available aftet donwload to local registry:
 
 ~~~
 $ podman images
-REPOSITORY                                                 TAG      IMAGE ID       CREATED                  SIZE
-registry.redhat.io/jboss-eap-7/eap72-openshift             latest   435638adf5ff   About an hour ago        934 MB
+REPOSITORY                                                      TAG      IMAGE ID       CREATED             SIZE
+registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7   latest   191ba3a02eff   3 weeks ago         834 MB
+
 ~~~
 
 5- Build the image with the Dockerfile:
@@ -34,9 +35,10 @@ $ podman build -t abarbosa/eaptest:1.0 ${PROJECT_HOME}/docker
 
 ~~~
 [abarbosa@localhost ~]$ podman images
-REPOSITORY                                                 TAG      IMAGE ID       CREATED              SIZE
-localhost/abarbosa/eaptest                                 1.0      dace9d7ed592   About an hour ago    934 MB
-registry.redhat.io/jboss-eap-7/eap72-openshift             latest   435638adf5ff   About an hour ago    934 MB
+REPOSITORY                                                      TAG      IMAGE ID       CREATED             SIZE
+localhost/abarbosa/eaptest                                      1.0      304fd5ad4bfb   About an hour ago   834 MB
+registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7   latest   191ba3a02eff   3 weeks ago         834 MB
+
 ~~~
 
 7- Create the podman image with the recent created image making available bind to 8080 port:
