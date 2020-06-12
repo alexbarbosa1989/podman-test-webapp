@@ -45,9 +45,10 @@ registry.redhat.io/jboss-eap-7/eap72-openshift             latest   435638adf5ff
  podman run -it -p 8080:8080 localhost/abarbosa/eaptest:1.0
 ~~~
 
-8- Validate the podman container process is now available using **podman ps**:
+8- Validate the podman container process is now available using **podman ps** command:
 
 ~~~
+podman ps
 CONTAINER ID  IMAGE                           COMMAND               CREATED        STATUS            PORTS                   NAMES
 eaf051a0b0db  localhost/abarbosa/eaptest:1.0  /opt/eap/bin/open...  7 seconds ago  Up 7 seconds ago  0.0.0.0:8080->8080/tcp  youthful_banzai
 ~~~
