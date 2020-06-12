@@ -10,6 +10,9 @@ $mvn clean install
 ~~~
 
 2- Move generated war to /docker dir or edit Dockerfile pointing to war path:
+~~~
+mv ${PROJECT_HOME}/target/jboss-test-webapp.war ${PROJECT_HOME}/docker/
+~~~
 
 3- Download the latest eap 7.2 image from Red Hat Registry https://access.redhat.com/containers/?tab=images#/registry.access.redhat.com/jboss-eap-7/eap72-openshift
 
@@ -24,7 +27,7 @@ registry.redhat.io/jboss-eap-7/eap72-openshift             latest   435638adf5ff
 5- Build the image with the Dockerfile:
 
 ~~~
-$ podman build -t abarbosa/eaptest:1.0 /home/abarbosa/workspace/jboss-test-webapp/docker
+$ podman build -t abarbosa/eaptest:1.0 ${PROJECT_HOME}/docker
 ~~~
 
 6- Review if image abarbosa/eaptest:1.0 was created (make sure to write the tag in lowercase):

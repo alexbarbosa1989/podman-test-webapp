@@ -1,7 +1,7 @@
 # dockerfile to build image for JBoss EAP 7
 
 #start from eap72-openshift
-FROM registry.redhat.io/jboss-eap-7/eap72-openshift
+FROM registry.redhat.io/jboss-datagrid-7/datagrid73-openshift
 
 # Copy war to deployments folder
 COPY jboss-test-webapp.war $JBOSS_HOME/standalone/deployments/
