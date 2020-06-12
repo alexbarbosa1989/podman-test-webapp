@@ -64,5 +64,5 @@ $ sudo systemctl restart firewalld
 10- Test the deployed war service:
 
 ~~~
-$curl localhost:8080/jboss-test-webapp
+$ curl http://localhost:8080/jboss-test-webapp/index.jsf
 ~~~
