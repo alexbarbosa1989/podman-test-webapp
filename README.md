@@ -66,3 +66,28 @@ $ sudo systemctl restart firewalld
 ~~~
 $ curl http://localhost:8080/jboss-test-webapp/index.jsf
 ~~~
+
+
+VARIATION TEST:
+
+If want to test adding CLI commands in Dockerfile, below is an example of that. In the example, is adding to the docker file the RUN instruction to enable jboss-cli then execute the command:
+
+~~~
+#ADD cli command test
+RUN /bin/sh -c '$JBOSS_HOME/bin/standalone.sh -c=standalone-openshift.xml &' && \
+      sleep 10 && \
+      cd /tmp && \
+      $JBOSS_HOME/bin/jboss-cli.sh --connect --command="/subsystem=logging/root-logger=ROOT:write-attribute(name=level,value=TRACE)"
+
+#chown all JBOSS_HOME dir to jboss user
+RUN chown -R jboss:jboss $JBOSS_HOME
+~~~
+
+This command can be added just before the last Dockerfile instruction:
+
+~~~
+# Important, use jboss user to run image
+USER jboss
+~~~
+
+After save the Dockerfile, the process is exactly the same as described in the above, step by step, instructions.
