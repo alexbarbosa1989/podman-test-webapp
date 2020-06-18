@@ -68,9 +68,11 @@ $ curl http://localhost:8080/jboss-test-webapp/index.jsf
 ~~~
 
 
-VARIATION TEST:
 
-If want to test adding CLI commands in Dockerfile, below is an example of that. In the example, is adding to the docker file the RUN instruction to enable jboss-cli then execute the command:
+
+**VARIATION TEST:  Modify standalone-openshift.xml configuration in Dockerfile**
+
+If want to test adding CLI commands in Dockerfile, below is an example of that. In the example, is adding to the docker file the RUN instruction to enable jboss-cli then execute the cli command to enable TRACE in ROOT logger:
 
 ~~~
 #ADD cli command test
