@@ -68,7 +68,7 @@ $ curl http://localhost:8080/jboss-test-webapp/index.jsf
 ~~~
 
 
-
+########
 
 **VARIATION TEST:  Modify standalone-openshift.xml configuration in Dockerfile**
 
