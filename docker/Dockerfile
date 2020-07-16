@@ -1,6 +1,7 @@
 # dockerfile to build image for JBoss EAP 7
 
 #start from eap72-openshift
+#registry.redhat.io/jboss-eap-7/eap72-openshift
 FROM registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7
 
 # Copy war to deployments folder
