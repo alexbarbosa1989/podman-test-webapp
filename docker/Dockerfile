@@ -13,5 +13,5 @@ USER root
 # Modify owners war
 RUN chown jboss:jboss $JBOSS_HOME/standalone/deployments/jboss-test-webapp.war
 
-# Important, use jboss user to run image
-USER jboss
+# Important, use numeric user user to run image in Kubernetes/Openshift
+USER 1001
