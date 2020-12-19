@@ -13,5 +13,5 @@ USER root
 # Modify owners war
 RUN chown jboss:jboss $JBOSS_HOME/standalone/deployments/jboss-test-webapp.war
 
-# Important, use numeric user user to run image in Kubernetes/Openshift
+# Important, use numeric user user to run image in Kubernetes/Openshift. Other containerized env can run with another user i. e., jboss
 USER 1001
