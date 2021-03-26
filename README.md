@@ -88,8 +88,8 @@ RUN chown -R jboss:jboss $JBOSS_HOME
 This command can be added just before the last Dockerfile instruction:
 
 ~~~
-# Important, use jboss user to run image
-USER jboss
+# Important, use numeric user user to run image in Kubernetes/Openshift. Other containerized env can run with another user i. e., jboss
+USER 1001
 ~~~
 
 After save the Dockerfile, the process is exactly the same as described in the above, step by step, instructions.
