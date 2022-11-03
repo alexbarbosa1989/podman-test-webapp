@@ -2,7 +2,7 @@
 
 #start from eap72-openshift
 #registry.redhat.io/jboss-eap-7/eap72-openshift
-FROM registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7
+FROM FROM registry.redhat.io/jboss-eap-7/eap74-openjdk11-openshift-rhel8
 
 # Copy war to deployments folder
 COPY jboss-test-webapp.war $JBOSS_HOME/standalone/deployments/
